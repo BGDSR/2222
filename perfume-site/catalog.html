@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Каталог арабской парфюмерии | Купить оригинальные арабские духи</title>
+	<meta name="description" content="Каталог арабской парфюмерии: восточные, мускусные, цветочные, древесные ароматы. Оригинал из ОАЭ. Опт и розница, доставка по РФ.">
+	<link rel="canonical" href="/catalog.html">
+	<meta name="robots" content="index,follow">
+	<link rel="stylesheet" href="/assets/styles.css">
+	<meta name="whatsapp" content="79990000000">
+	<script defer src="/assets/main.js"></script>
+</head>
+<body>
+	<header class="site-header">
+		<div class="container nav">
+			<a class="brand" href="/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 4h5l-4 4 2 6-6-3-6 3 2-6-4-4h5z"/></svg><span class="brand-title">Maison Al Qamar</span></a>
+			<nav class="nav-links">
+				<a href="/catalog.html" class="badge">Каталог</a>
+				<a href="/blog/">Блог</a>
+				<a href="/about.html">О нас</a>
+				<a href="/wholesale.html">Опт</a>
+			</nav>
+			<div class="nav-cta">
+				<button class="btn btn-primary" id="cta-btn">Заказать консультацию</button>
+			</div>
+		</div>
+	</header>
+	<section class="section">
+		<div class="container">
+			<h1>Каталог</h1>
+			<form id="search-form" class="inline" role="search" style="margin:10px 0">
+				<input id="search-input" placeholder="Поиск по названию или бренду" aria-label="Поиск">
+				<button class="btn btn-outline" type="submit">Искать</button>
+			</form>
+			<div class="catalog-controls">
+				<div id="catalog-filters"></div>
+				<div class="chips"><span class="chip">Оригинал ОАЭ</span><span class="chip">Доставка по РФ</span><span class="chip">Скидки до 35%</span></div>
+			</div>
+			<div id="catalog"></div>
+			<div class="divider"></div>
+			<h2>Рекомендуем</h2>
+			<div id="recommended"></div>
+		</div>
+	</section>
+	<footer class="footer">
+		<div class="container footer-grid">
+			<div>
+				<div class="brand"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 4h5l-4 4 2 6-6-3-6 3 2-6-4-4h5z"/></svg><span class="brand-title">Maison Al Qamar</span></div>
+				<p class="muted">Оригинальная арабская парфюмерия из ОАЭ. Опт и розница.</p>
+			</div>
+			<div>
+				<strong>Навигация</strong>
+				<div><a href="/">Главная</a></div>
+				<div><a href="/wholesale.html">Опт</a></div>
+				<div><a href="/about.html">О нас</a></div>
+			</div>
+			<div>
+				<strong>Правовая</strong>
+				<div><a href="/privacy.html">Конфиденциальность</a></div>
+				<div><a href="/terms.html">Соглашение</a></div>
+			</div>
+			<div>
+				<strong>Контакты</strong>
+				<div><a href="tel:+79990000000">+7 (999) 000-00-00</a></div>
+				<div><a href="mailto:sales@alqamar.example">sales@alqamar.example</a></div>
+			</div>
+		</div>
+	</footer>
+	<div class="sticky-cta"><button class="btn btn-primary" id="cta-btn">Заказать консультацию</button></div>
+	<div class="toast" id="toast"></div>
+	<div class="modal" id="consult-modal"><div class="dialog"><div class="inline" style="justify-content:space-between;align-items:center"><h3>Заявка на консультацию</h3><button class="icon-btn" data-close="consult">×</button></div><form id="consult-form"><div class="field"><label>Имя</label><input required name="name"></div><div class="field"><label>Телефон</label><input required name="phone"></div><div class="field"><label>Email</label><input type="email" name="email"></div><div class="inline"><button class="btn btn-primary" type="submit">Отправить</button><button class="btn btn-outline" type="button" data-close="consult">Отмена</button></div></form></div></div>
+	<script>
+		const form=document.getElementById('search-form');
+		form?.addEventListener('submit',e=>{e.preventDefault();const v=document.getElementById('search-input').value.trim();const url=new URL(location.href);if(v)url.searchParams.set('q',v);else url.searchParams.delete('q');history.replaceState({},'',url.toString());document.dispatchEvent(new CustomEvent('do-search'))});
+	</script>
+</body>
+</html>

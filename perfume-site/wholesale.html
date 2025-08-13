@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Оптовая арабская парфюмерия | Регистрация партнёра и цены</title>
+	<meta name="description" content="Оптовый портал: регистрация, MOQ от 20 шт, скидки до 35%, PDF-каталог с ценами. Поддержка и документы EAC.">
+	<link rel="canonical" href="/wholesale.html">
+	<link rel="stylesheet" href="/assets/styles.css">
+	<script defer src="/assets/main.js"></script>
+</head>
+<body>
+	<header class="site-header">
+		<div class="container nav">
+			<a class="brand" href="/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 4h5l-4 4 2 6-6-3-6 3 2-6-4-4h5z"/></svg><span class="brand-title">Maison Al Qamar</span></a>
+			<nav class="nav-links">
+				<a href="/catalog.html">Каталог</a>
+				<a href="/blog/">Блог</a>
+				<a href="/about.html">О нас</a>
+				<a class="badge" href="/wholesale.html">Опт</a>
+			</nav>
+			<div class="nav-cta">
+				<button class="btn btn-primary" id="cta-btn">Заказать консультацию</button>
+			</div>
+		</div>
+	</header>
+	<section class="section">
+		<div class="container">
+			<h1>Оптовым клиентам</h1>
+			<p>Минимальный заказ — 20 шт. Скидки на объём, персональный менеджер, быстрые отгрузки со склада в Москве и Дубае.</p>
+			<div class="grid grid-2" style="margin-top:14px">
+				<div class="surface" style="padding:16px">
+					<h3>Регистрация партнёра</h3>
+					<form id="partner-form">
+						<div class="field"><label>Компания</label><input name="company" required></div>
+						<div class="field"><label>ИНН</label><input name="inn" required></div>
+						<div class="field"><label>Контактное лицо</label><input name="name" required></div>
+						<div class="inline"><div class="field" style="flex:1"><label>Телефон</label><input name="phone" required></div><div class="field" style="flex:1"><label>Email</label><input type="email" name="email" required></div></div>
+						<div class="field"><label>Город</label><input name="city"></div>
+						<div class="field"><label>Планируемый объём (шт/мес)</label><input name="volume" type="number" min="20" step="10"></div>
+						<div class="lead-badges"><span class="lb">MOQ 20+</span><span class="lb">EAC</span><span class="lb">MSDS</span></div>
+						<div class="inline" style="margin-top:8px"><button class="btn btn-primary" type="submit">Зарегистрироваться</button><a class="btn btn-outline" href="/assets/catalog.pdf" download>Скачать PDF-каталог</a></div>
+						<div class="notice small">Отправляя форму, вы соглашаетесь с <a class="hover-underline" href="/terms.html">условиями</a> и <a class="hover-underline" href="/privacy.html">политикой</a>.</div>
+					</form>
+				</div>
+				<div class="surface" style="padding:16px">
+					<h3>Скидки на объём</h3>
+					<table class="table">
+						<thead><tr><th>Объём</th><th>Скидка</th><th>Срок отгрузки</th></tr></thead>
+						<tbody>
+							<tr><td>20–49 шт</td><td>до 15%</td><td>1–2 дня</td></tr>
+							<tr><td>50–99 шт</td><td>до 25%</td><td>1–3 дня</td></tr>
+							<tr><td>100+ шт</td><td>до 35%</td><td>2–5 дней</td></tr>
+						</tbody>
+					</table>
+					<div class="callout"><strong>Бонус:</strong> предоставляем медиа-пакеты и сценарии продаж для вашей команды.</div>
+				</div>
+			</div>
+			<div class="divider"></div>
+			<h3>Заявка в CRM</h3>
+			<p class="muted">Форма интегрирована с CRM. Укажите реальные IDs в коде для боевого окружения.</p>
+			<div id="hubspot-form"></div>
+		</div>
+	</section>
+	<footer class="footer">
+		<div class="container footer-grid">
+			<div>
+				<div class="brand"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 4h5l-4 4 2 6-6-3-6 3 2-6-4-4h5z"/></svg><span class="brand-title">Maison Al Qamar</span></div>
+				<p class="muted">Оптовые поставки арабской парфюмерии.</p>
+			</div>
+			<div>
+				<strong>Навигация</strong>
+				<div><a href="/">Главная</a></div>
+				<div><a href="/catalog.html">Каталог</a></div>
+				<div><a href="/about.html">О нас</a></div>
+			</div>
+			<div>
+				<strong>Правовая</strong>
+				<div><a href="/privacy.html">Конфиденциальность</a></div>
+				<div><a href="/terms.html">Соглашение</a></div>
+			</div>
+			<div>
+				<strong>Контакты</strong>
+				<div><a href="tel:+79990000000">+7 (999) 000-00-00</a></div>
+				<div><a href="mailto:sales@alqamar.example">sales@alqamar.example</a></div>
+			</div>
+		</div>
+	</footer>
+	<div class="sticky-cta"><button class="btn btn-primary" id="cta-btn">Заказать консультацию</button></div>
+	<div class="toast" id="toast"></div>
+	<div class="modal" id="consult-modal"><div class="dialog"><div class="inline" style="justify-content:space-between;align-items:center"><h3>Заявка на консультацию</h3><button class="icon-btn" data-close="consult">×</button></div><form id="consult-form"><div class="field"><label>Имя</label><input required name="name"></div><div class="field"><label>Телефон</label><input required name="phone"></div><div class="field"><label>Email</label><input type="email" name="email"></div><div class="inline"><button class="btn btn-primary" type="submit">Отправить</button><button class="btn btn-outline" type="button" data-close="consult">Отмена</button></div></form></div></div>
+	<script>
+		(function(){var d=document,s=d.createElement('script');s.src='https://js.hsforms.net/forms/embed/v2.js';s.async=1;s.onload=function(){if(window.hbspt){window.hbspt.forms.create({region:'eu1',portalId:'00000000',formId:'00000000-0000-0000-0000-000000000000',target:'#hubspot-form'});}};d.head.appendChild(s);}());
+		document.getElementById('partner-form')?.addEventListener('submit',function(e){e.preventDefault();const data=Object.fromEntries(new FormData(this));localStorage.setItem('partnerLead',JSON.stringify({...data,ts:Date.now()}));document.getElementById('toast').textContent='Регистрация отправлена. Менеджер свяжется с вами.';document.getElementById('toast').classList.add('show');setTimeout(()=>document.getElementById('toast').classList.remove('show'),2500)});
+	</script>
+</body>
+</html>

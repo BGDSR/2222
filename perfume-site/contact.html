@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Контакты | Maison Al Qamar</title>
+	<meta name="description" content="Контакты: телефон, email, WhatsApp. Склад: Москва / Дубай. Напишите нам для оптового прайса.">
+	<link rel="canonical" href="/contact.html">
+	<link rel="stylesheet" href="/assets/styles.css">
+	<script defer src="/assets/main.js"></script>
+</head>
+<body>
+	<header class="site-header">
+		<div class="container nav">
+			<a class="brand" href="/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 4h5l-4 4 2 6-6-3-6 3 2-6-4-4h5z"/></svg><span class="brand-title">Maison Al Qamar</span></a>
+			<nav class="nav-links">
+				<a href="/catalog.html">Каталог</a>
+				<a href="/blog/">Блог</a>
+				<a href="/wholesale.html">Опт</a>
+				<a class="badge" href="/contact.html">Контакты</a>
+			</nav>
+			<div class="nav-cta">
+				<button class="btn btn-primary" id="cta-btn">Заказать консультацию</button>
+			</div>
+		</div>
+	</header>
+	<section class="section">
+		<div class="container grid grid-2">
+			<div>
+				<h1>Свяжитесь с нами</h1>
+				<form id="contact-form" class="surface" style="padding:16px;margin-top:8px">
+					<div class="field"><label>Имя</label><input name="name" required></div>
+					<div class="inline"><div class="field" style="flex:1"><label>Телефон</label><input name="phone" required></div><div class="field" style="flex:1"><label>Email</label><input type="email" name="email"></div></div>
+					<div class="field"><label>Сообщение</label><textarea name="message" placeholder="Ваш запрос"></textarea></div>
+					<div class="inline"><button class="btn btn-primary" type="submit">Отправить</button><a class="btn btn-outline" href="https://wa.me/79990000000" target="_blank">Написать в WhatsApp</a></div>
+				</form>
+			</div>
+			<div>
+				<h3>Офисы и склады</h3>
+				<div class="surface" style="padding:16px">
+					<p><b>Москва</b> — самовывоз и доставка по РФ</p>
+					<p><b>Дубай</b> — поставки под заказ</p>
+					<div class="divider"></div>
+					<div class="small">Тел.: <a href="tel:+79990000000">+7 (999) 000-00-00</a></div>
+					<div class="small">Email: <a href="mailto:sales@alqamar.example">sales@alqamar.example</a></div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="footer">
+		<div class="container footer-grid">
+			<div>
+				<div class="brand"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 4h5l-4 4 2 6-6-3-6 3 2-6-4-4h5z"/></svg><span class="brand-title">Maison Al Qamar</span></div>
+				<p class="muted">Оригинальная арабская парфюмерия из ОАЭ.</p>
+			</div>
+			<div>
+				<strong>Навигация</strong>
+				<div><a href="/catalog.html">Каталог</a></div>
+				<div><a href="/wholesale.html">Опт</a></div>
+			</div>
+			<div>
+				<strong>Правовая</strong>
+				<div><a href="/privacy.html">Конфиденциальность</a></div>
+				<div><a href="/terms.html">Соглашение</a></div>
+			</div>
+			<div>
+				<strong>Контакты</strong>
+				<div><a href="tel:+79990000000">+7 (999) 000-00-00</a></div>
+				<div><a href="mailto:sales@alqamar.example">sales@alqamar.example</a></div>
+			</div>
+		</div>
+	</footer>
+	<script>
+		document.getElementById('contact-form')?.addEventListener('submit',function(e){e.preventDefault();const data=Object.fromEntries(new FormData(this));localStorage.setItem('contactLead',JSON.stringify({...data,ts:Date.now()}));alert('Сообщение отправлено. Мы свяжемся с вами.');});
+	</script>
+</body>
+</html>
