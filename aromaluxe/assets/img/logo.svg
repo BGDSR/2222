@@ -1,0 +1,10 @@
+<svg width="140" height="36" viewBox="0 0 140 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="140" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#CBA135"/>
+      <stop offset="1" stop-color="#E2C676"/>
+    </linearGradient>
+  </defs>
+  <rect x="0.5" y="0.5" width="139" height="35" rx="8" fill="url(#g)" fill-opacity="0.08" stroke="#2a2a3a"/>
+  <text x="16" y="24" font-family="'Playfair Display', Georgia, serif" font-size="18" fill="url(#g)">AromaLuxe</text>
+</svg>
